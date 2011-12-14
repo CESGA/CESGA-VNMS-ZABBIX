@@ -1,0 +1,184 @@
+CESGA VNMS 0.8
+
+===========================================================
+1)Requirements
+2)Installation
+3)Configuration
+===========================================================
+
+1) Requirements
+
+	- LAMP installation (Linux+Apache+PHP)
+		Apache version 2.0 or greater is recommended.
+		PHP 5.3.3  or greater
+	- ZABBIX frontend v1.8.2 or v1.8.8 (local install or separate server)
+
+2) Installation
+
+	- Unzip de source code provided.
+	- Copy the folder "cesga_vnms" to apache document root and assign right permisions to apache web server process.
+	- Modify Zabbix API. Follow instructions 2.1 for patching instructions (Zabbix client 1.8.2 or 1.8.8) or 2.2 for manual modification instructions (other Zabbix client version).
+
+2.1) Patching instructions
+
+Copy the patch file (located in "patch" folder) to the Zabbix API path (usually /var/www/html/api/classes) and execute the following command inside the "html/api" folder:
+	  
+$ patch -p1 -R < patch_classes_zabbix-1.8.X.patch
+
+2.2) Manual patching instructions
+
+Go to the Zabbix API class path  (/var/www/html/api/classes)  and modify the following classes :
+
+- class.chost.php
+
+a) Add new parameter "userid" in 'get' method.
+
+....
+$def_options = array(
+	'nodeids' => null,
+	'groupids' => null,
+	'userid' => null, // add this new option
+...
+
+b) Add code between comments , after the function call zbx_array_merge()
+
+...
+$options = zbx_array_merge($def_options, $options);
+
+/* This is the new code */
+if(!is_null($options['userid'])){
+   $USER_DETAILS['userid']=$options['userid'];
+   $users = CUser::get(array('userids' => $options['userid'],  'extendoutput' => 1));
+   foreach($users as $unum => $user)
+     $USER_DETAILS['type']=$user['type'];
+     $user_type = $USER_DETAILS['type'];
+     $userid = $USER_DETAILS['userid'];
+}
+/* end of new code */
+...
+
+c) Add new parameter "userid" in 'get' method from class.ctrigger.php in your Zabbix API:
+
+....
+$def_options = array(
+	'triggerids' => null,
+	'userid' => null, // add this new option
+...
+
+d) Add code between comments , after the function call zbx_array_merge()
+
+...
+$options = zbx_array_merge($def_options, $options);
+
+/* This is the new code */
+if(!is_null($options['userid'])){
+   $USER_DETAILS['userid']=$options['userid'];
+   $users = CUser::get(array('userids' => $options['userid'],  'extendoutput' => 1));
+   foreach($users as $unum => $user)
+        $USER_DETAILS['type']=$user['type'];
+   $user_type = $USER_DETAILS['type'];
+   $userid = $USER_DETAILS['userid'];
+}
+
+/* end of new code */
+...
+
+e) Add new parameter "userid" in 'get' method from class.chostgroup.php in your Zabbix API:
+
+....
+$def_options = array(
+	'groupids' => null,
+	'userid' => null, // add this new option
+...
+
+f) Add code between comments , after the call function zbx_array_merge()
+
+...
+$options = zbx_array_merge($def_options, $options);
+
+/* This is the new code */
+if(!is_null($options['userid'])){
+   $USER_DETAILS['userid']=$options['userid'];
+   $users = CUser::get(array('userids' => $options['userid'],  'extendoutput' => 1));
+   foreach($users as $unum => $user)
+         $USER_DETAILS['type']=$user['type'];
+   $user_type = $USER_DETAILS['type'];
+   $userid = $USER_DETAILS['userid'];
+}
+
+/* end of new code */
+...
+
+g) Add new parameter "userid" in 'get' method from class.cscreen.php in your Zabbix API:
+
+// Add userid in array options at the beginning of class
+....
+$def_options = array(
+	'nodeids' => null,
+	'screenids' => null,
+	'userid' => null, // new option
+...
+
+h) Add code between comments , after the call function zbx_array_merge()
+
+...
+$options = zbx_array_merge($def_options, $options);
+
+/* This is the new code */
+if(!is_null($options['userid'])){
+   $USER_DETAILS['userid']=$options['userid'];
+   $users = CUser::get(array('userids' => $options['userid'],  'extendoutput' => 1));
+   foreach($users as $unum => $user)
+      $USER_DETAILS['type']=$user['type'];
+   $user_type = $USER_DETAILS['type'];
+   $userid = $USER_DETAILS['userid'];
+}
+/* end of new code */
+...
+
+
+i) Finally, new code should be added. This code is located at "patch/class_files" folder. For example, file "class.chost.php__getDATA_MVL.php" contents must be added to class.chost.php and so on.
+
+Example: class.chost.php
+...
+  } /* End of other method */
+
+  /* Enter here get_DATA_MVL */
+  public static function getDATA_MVL($options=array())) {
+ 	/* CODE for this method */
+  }
+  /* End for get_DATA_MVL */
+
+}
+
+
+
+3) Configuration
+
+Add a Zabbix user on your Zabbix configuration with access to Zabbix API. 
+
+Modify config.php located at $WEB_PATH/config.php
+
+     $SERVER_ZABBIX = "Host URL";
+     $USER_API_ZABBIX= "Zabbix API user";
+     $PASS_API_ZABBIX= "Zabbix API user password";
+     $USER_READ_ONLY_ZABBIX="one zabbix user with only read permissions ";
+     $PASS_READ_ONLY_ZABBIX="one user with only read permissions";
+     $LOGIN_WITH_LDAP = true;
+     $LDAP_SERVER = "server LDAP ";
+     $LDAP_SEARCH_DN="DN of LDAP ";
+     $LDAP_BIND_USER = "BIND user for LDAP";
+     $LDAP_BIN_PASS = "Pass for BIND ";
+
+ Check if user contains the atributte that defines permissions to access zabbix.
+
+     $LDAP_USE_PERMISSION_ATRIBUTE = true;
+     $LDAP_PERMISSION_ATRIBUTE =" tag name for permission atribute";
+
+ The aplication must have permissions in this directory
+     $DIR_TEMP="/tmp";
+
+
+===========================================================
+
+

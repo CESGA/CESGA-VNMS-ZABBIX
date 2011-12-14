@@ -1,0 +1,244 @@
+.imagenIcon{
+    padding-right: 10px!important;
+}
+
+
+.msgError{
+    text-align: center;
+    font-size: 12px;
+    color: #8B0A0A;
+    font-weight: bold;
+}
+
+.contentSinMarxen{
+padding-left:0px!important;
+padding-right:0px!important;
+}
+
+.estiloToolsHost{
+    font-size: 14px!important;
+    white-space:normal!important;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.estiloRadio{
+    font-size: 13px!important;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+}
+
+.hostcampo {
+    font-size: 16px;
+    white-space:normal!important;
+}
+
+.hostcampo2 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 5px;
+    white-space:normal!important;
+}
+#indices {
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+}
+
+#indices a{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+.alerta {
+    white-space:normal!important;
+    margin-right: 40px!important;
+    padding-right: 0px!important;
+    padding-right: -40px;
+    min-width: 300x;
+    padding-bottom: 10px;
+}
+
+.alertaIMG {
+    margin-left:10px;
+    margin-top: 17px;
+    margin-right: 5px;
+}
+
+.alertaIMG2 {
+    margin-left:12px;
+    margin-top: 22px;
+    margin-right: 5px;
+}
+
+.alertah3 {
+    white-space:normal!important;
+    margin-left:-45px!important;
+}
+
+.alertap{
+    white-space:normal!important;
+    margin-left:-40px!important;
+}
+
+p.ackdiv {
+    margin-top: -10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+p.smsdiv {
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 4px;
+}
+
+a.ack {
+    margin-left:40px;
+    margin-top: 0px;
+    color: #75170A;
+    width:150px;
+    font-size: 13px;
+}
+
+
+#content {
+    padding-bottom: 200px;
+}
+
+#tituloSeccion{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #165172;
+}
+
+.tituloSeccion2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #165172;
+}
+
+
+.nav-iconos .ui-btn .ui-btn-inner {
+    padding-top: 47px !important;
+}
+
+.ui-block{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+ .nav-iconos .ui-btn .ui-icon {
+     width: 50px!important;
+     height: 40px!important;
+     margin-left: -24px !important;
+     margin-bottom: 10px;
+     padding-bottom: 10px;
+     box-shadow: none !important;
+     -moz-box-shadow: none !important;
+     -webkit-box-shadow: none !important;
+     -webkit-border-radius: none !important;
+     border-radius: none !important;
+ }
+ #dashboard .ui-icon { 
+     background: url(../img/dashboard.png) 50% 50% no-repeat;
+     background-position: center;
+     margin-left: auto;
+     margin-right: auto;
+
+     background-size: 30px 30px;
+ }
+ #dashboard2 .ui-icon, #dashboard:hover .ui-icon {
+     background: url(../img/dashboardOver.png) 50% 50% no-repeat;
+     background-position: center;
+     margin-left: auto;
+     margin-right: auto;
+
+     background-size: 30px 30px;
+ }
+ #config .ui-icon { 
+     background: url(../img/config.png) 50% 50% no-repeat;
+     margin-left: auto;
+     margin-right: auto;
+     background-size: 30px 30px; }
+
+  #config2 .ui-icon {
+     background: url(../img/configOver.png) 50% 50% no-repeat;
+     margin-left: auto;
+     margin-right: auto;
+     background-size: 30px 30px; }
+
+ #config:hover .ui-icon {
+     background: url(../img/configOver.png) 50% 50% no-repeat;
+     margin-left: auto;
+     margin-right: auto;
+     background-size: 30px 30px; }
+
+ #tools .ui-icon { 
+     background: url(../img/tools.png) 50% 50% no-repeat;
+     margin-left: auto;
+     margin-right: auto;
+     background-size: 30px 30px; }
+ #tools2 .ui-icon {
+     background: url(../img/toolsOver.png) 50% 50% no-repeat;
+     margin-left: auto;
+     margin-right: auto;
+     background-size: 30px 30px; }
+ #tools:hover .ui-icon {
+     background: url(../img/toolsOver.png) 50% 50% no-repeat;
+     margin-left: auto;
+     margin-right: auto;
+     background-size: 30px 30px; }
+ #host .ui-icon { 
+     background: url(../img/hostInfo.png) 50% 50% no-repeat;
+          margin-left: auto;
+     margin-right: auto;
+     background-size: 30px 30px; }
+  #host:hover .ui-icon {
+     background: url(../img/hostInfoOver.png) 50% 50% no-repeat;
+          margin-left: auto;
+     margin-right: auto;
+     background-size: 30px 30px; }
+  #host2 .ui-icon {
+     background: url(../img/hostInfoOver.png) 50% 50% no-repeat;
+          margin-left: auto;
+     margin-right: auto;
+     background-size: 30px 30px; }
+
+ .activado {
+        border: black!important;
+	background: 			#444444 /*{a-bhover-background-color}*/!important;
+	font-weight: bold!important;
+	color: 					#fff /*{a-bhover-color}*/!important;
+	text-shadow: 0 /*{a-bhover-shadow-x}*/ -1px /*{a-bhover-shadow-y}*/ 1px /*{a-bhover-shadow-radius}*/ #000!important /*{a-bhover-shadow-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#666 /*{a-bhover-background-start}*/), to(#444 /*{a-bhover-background-end}*/))!important; /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #666 /*{a-bhover-background-start}*/, #444 /*{a-bhover-background-end}*/)!important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #666 /*{a-bhover-background-start}*/, #444 /*{a-bhover-background-end}*/)!important; /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #666 /*{a-bhover-background-start}*/, #444 /*{a-bhover-background-end}*/)!important; /* IE10 */
+	background-image:      -o-linear-gradient(top, #666 /*{a-bhover-background-start}*/, #444 /*{a-bhover-background-end}*/)!important; /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #666 /*{a-bhover-background-start}*/, #444 /*{a-bhover-background-end}*/)!important;
+}
+
+.botonLogut {
+    position: absolute; right: 10px; top: .4em;
+    -moz-border-radius: 		2em /*{global-radii-buttons}*/;
+    -webkit-border-radius: 		2em /*{global-radii-buttons}*/;
+    border-radius: 			2em /*{global-radii-buttons}*/;
+}
+
+ #alert0 .ui-icon {
+     background: url(../img/1316586887_alert.png) no-repeat!important;
+     margin-left: auto!important;
+     margin-right: auto!important;
+     background-size: 32px 32px!important;
+ }
+

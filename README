@@ -1,0 +1,58 @@
+CESGA VNMS 0.8
+
+===========================================================
+1)What is it?
+2)Documentation
+3)Installation
+4)License
+===========================================================
+
+1) What is it?
+
+CESGA VNMS is a light web client for Zabbix network monitoring tool developed by CESGA (Galicia Supercomputing Center). It is been targeted to mobile clients and it allows the following functionalities:
+
+  * Display issues (last issues and active issues, ordered or not by group). 
+
+  * Display host information (searchable by host it retrieves IP, group, issues, graphs and allows basic checks like ping or traceroute). 
+
+  * Display screen information (graphs groups from different hosts defined in ZABBIX interface).
+
+  * Provides network query tools like nslookup, whois, ping, traceroute, etc. to any IP address/port.  
+
+
+2) Documentation
+
+Read documentation located at "docs" folder.
+
+
+3) Installation
+
+Read "INSTALL" file.
+
+4) License
+
+
+1- CESGA VNMS docs is released under Open Source Initiative OSI – The MIT License (MIT).
+For additional details, including answers to common questions about The MIT License, go to http://www.opensource.org/licenses/mit-license.php
+
+Permissions beyond the scope of this license may be available at www.cesga.es.
+
+
+2- The path source is released under the GNU General Public License (GPL) version 2. The formal terms of the GPL can be found at http://www.fsf.org/licenses/
+For additional details, including answers to common questions about the GPL, see the generic FAQ from the Free Software Foundation at http://www.fsf.org/licenses/gpl-faq.html
+
+
+3- The CESGA VNMS Manual is not released under GPL and MIT licenses. Use of the Manual is subject to the following terms:
+
+1.Conversions to other formats is allowed, but the actual content may not be altered or edited in any way
+
+2.You may create a printed copy for your personal use
+
+3.For all other uses, such as selling printed copies or using (parts of) the Manual in another publication, prior written agreement from CESGA is required.
+
+
+If you want to know more about  CESGA (Centre of Supercomputing of Galicia) 
+visit out site: https://www.cesga.es/
+===========================================================
+
+
