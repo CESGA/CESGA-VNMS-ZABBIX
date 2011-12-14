@@ -337,7 +337,10 @@ function get_host_inf()
     $cont = 0;
     
     foreach ($triggers as $tr){
+<<<<<<< HEAD
         if ($tr[value]>0) {
+=======
+>>>>>>> 71fd72616a5f2fc3da0a5f2b0ff1b2a85c6c22c5
         $info_alert[$cont][priority]=$tr[priority];
         $info_alert[$cont][status]=$tr[status];
         $info_alert[$cont][value]=$tr[value];
@@ -352,7 +355,10 @@ function get_host_inf()
         $info_alert[$cont][valorEvento]=$t[0][value];
         $info_alert[$cont][acknowledged]=$t[0][acknowledged];
         $cont++;
+<<<<<<< HEAD
         }
+=======
+>>>>>>> 71fd72616a5f2fc3da0a5f2b0ff1b2a85c6c22c5
     }
 
     
@@ -740,8 +746,12 @@ function go_to_dashboard()
     $alertas = array();
     $cont = 0;
     foreach ($alert1 as $p){
+<<<<<<< HEAD
         if (!in_array($p[hosts][0][hostid],$lhost)
               && ($p[value]>0)){
+=======
+        if (!in_array($p[hosts][0][hostid],$lhost)){
+>>>>>>> 71fd72616a5f2fc3da0a5f2b0ff1b2a85c6c22c5
             $group= ZabbixAPI::fetch_array('host','get',
                 array(hostids => array ($p[hosts][0][hostid]),
                 select_groups => "extend",

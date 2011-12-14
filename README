@@ -9,7 +9,11 @@ CESGA VNMS 0.8
 
 1) What is it?
 
+<<<<<<< HEAD
 CESGA VNMS is a light web client for Zabbix network monitoring tool developed by CESGA (Galicia Supercomputing Center). It is been targeted to mobile clients and it allows the following functionalities:
+=======
+CESGA VNMS is a light web client for Zabbix network monitoring tool developed by CESGA (Galicia Supercomputing Center). It is focused on mobile clients and it allows the following functionalities:
+>>>>>>> 71fd72616a5f2fc3da0a5f2b0ff1b2a85c6c22c5
 
   * Display issues (last issues and active issues, ordered or not by group). 
 
@@ -29,15 +33,23 @@ Read documentation located at "docs" folder.
 
 Read "INSTALL" file.
 
+<<<<<<< HEAD
 4) License
 
 
 1- CESGA VNMS docs is released under Open Source Initiative OSI – The MIT License (MIT).
+=======
+
+4) License
+
+4.1) CESGA VNMS docs is released under Open Source Initiative OSI – The MIT License (MIT).
+>>>>>>> 71fd72616a5f2fc3da0a5f2b0ff1b2a85c6c22c5
 For additional details, including answers to common questions about The MIT License, go to http://www.opensource.org/licenses/mit-license.php
 
 Permissions beyond the scope of this license may be available at www.cesga.es.
 
 
+<<<<<<< HEAD
 2- The path source is released under the GNU General Public License (GPL) version 2. The formal terms of the GPL can be found at http://www.fsf.org/licenses/
 For additional details, including answers to common questions about the GPL, see the generic FAQ from the Free Software Foundation at http://www.fsf.org/licenses/gpl-faq.html
 
@@ -53,6 +65,20 @@ For additional details, including answers to common questions about the GPL, see
 
 If you want to know more about  CESGA (Centre of Supercomputing of Galicia) 
 visit out site: https://www.cesga.es/
+=======
+4.2) The Zabbix patch source is released under the GNU General Public License (GPL) version 2. The formal terms of the GPL can be found at http://www.fsf.org/licenses/
+For additional details, including answers to common questions about the GPL, see the generic FAQ from the Free Software Foundation at http://www.fsf.org/licenses/gpl-faq.html
+
+
+4.3) The CESGA VNMS Manual is not released under GPL and MIT licenses. Use of the Manual is subject to the following terms:
+
+- Conversions to other formats is allowed, but the actual content may not be altered or edited in any way
+- You may create a printed copy for your personal use
+- For all other uses, such as selling printed copies or using (parts of) the Manual in another publication, prior written agreement from CESGA is required.
+
+
+If you want to know more about CESGA (Galicia Supercomputing Center) check our website: https://www.cesga.es/
+>>>>>>> 71fd72616a5f2fc3da0a5f2b0ff1b2a85c6c22c5
 ===========================================================
 
 
