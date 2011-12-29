@@ -318,12 +318,14 @@ class NetworkQueryTool {
       $this->debug('resolveAddr() has invalid IP address: ' . $ipAddress);
       return false;
     }
-    
+
     $host = @gethostbyaddr($ipAddress);
+/*
     if ($host == $ipAddress) {
       $this->setError(self::$NQT_RESOLVEFAIL_ADDR);
       return false;
     }
+ */
     return $host;
   }
   
