@@ -465,6 +465,7 @@ function extraeArrayID($fichero){
 
 }
 
+//function to eliminate duplicated hosts and to order by its hostname
 function super_unique($array)
 {
     $result = array_map("unserialize", array_unique(array_map("serialize", $array)));
