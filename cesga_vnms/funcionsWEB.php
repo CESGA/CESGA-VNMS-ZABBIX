@@ -465,6 +465,29 @@ function extraeArrayID($fichero){
 
 }
 
+function super_unique($array)
+{
+    $result = array_map("unserialize", array_unique(array_map("serialize", $array)));
+
+  foreach ($result as $key => $value)
+  {
+    if ( is_array($value) )
+    {
+      $result[$key] = super_unique($value);
+    }
+  }
+
+    //reorder
+    foreach ($result as $key => $row) {
+        $host[$key] = $row['host'];
+    }
+    // Sort the data with host name ascending,
+    array_multisort($host, SORT_ASC, $result);
+
+  return $result;
+}
+
+
 function filtraResultadosHost($resultados,$filtrados){
 
 
@@ -482,11 +505,11 @@ function filtraResultadosHost($resultados,$filtrados){
                 $cont++;
             }
         }
-        return $res;
+        return super_unique($res);
     } else {
-        return $resultados;
+        return super_unique($resultados);
     }
-return $resultados;
+return super_unique($resultados);
 
 }
 
